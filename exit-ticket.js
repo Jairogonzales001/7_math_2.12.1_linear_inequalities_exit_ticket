@@ -218,34 +218,6 @@ function displayResults(score, results) {
     inputs.forEach(input => input.disabled = true);
 }
 
-function resetForm() {
-    // Re-enable inputs
-    const inputs = document.querySelectorAll('input[type="text"], textarea, input[type="radio"]');
-    inputs.forEach(input => {
-        input.disabled = false;
-        if (input.type !== 'date') {
-            input.value = '';
-        }
-        if (input.type === 'radio') {
-            input.checked = false;
-        }
-    });
-
-    // Clear feedback
-    for (let i = 1; i <= 5; i++) {
-        const feedbackDiv = document.getElementById(`feedback${i}`);
-        feedbackDiv.innerHTML = '';
-        feedbackDiv.className = 'feedback';
-    }
-
-    // Hide results and show submit button
-    document.getElementById('resultsSection').style.display = 'none';
-    document.querySelector('.submit-btn').style.display = 'block';
-
-    // Scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
 // Auto-fill date on load
 window.addEventListener('load', function() {
     const dateInput = document.getElementById('studentDate');
