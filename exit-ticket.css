@@ -1,0 +1,509 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+}
+
+.header h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Student Info */
+.student-info {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.info-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-row label {
+    font-weight: 600;
+    min-width: 120px;
+    color: #333;
+}
+
+.info-row input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.info-row input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Instructions */
+.instructions {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.instructions h3 {
+    color: #856404;
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    color: #856404;
+    margin-bottom: 8px;
+}
+
+.instructions p:last-child {
+    margin-bottom: 0;
+}
+
+/* Questions */
+.question {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+}
+
+.question h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+.problem {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.problem strong {
+    color: #764ba2;
+    font-size: 1.1em;
+}
+
+.work-area {
+    margin: 15px 0;
+}
+
+.work-area label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.work-area textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    resize: vertical;
+}
+
+.work-area textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.answer-input {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.answer-input label {
+    font-weight: 600;
+    color: #333;
+}
+
+.answer-input input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #667eea;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.answer-input input:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Multiple Choice */
+.multiple-choice {
+    margin-top: 15px;
+}
+
+.multiple-choice label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.multiple-choice label:hover {
+    background: #f0f0f0;
+    border-color: #667eea;
+}
+
+.multiple-choice input[type="radio"] {
+    margin-right: 10px;
+}
+
+.multiple-choice label span {
+    font-size: 1.05em;
+}
+
+/* Feedback */
+.feedback {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.feedback.correct {
+    background: #d4edda;
+    color: #155724;
+    border: 2px solid #c3e6cb;
+}
+
+.feedback.incorrect {
+    background: #f8d7da;
+    color: #721c24;
+    border: 2px solid #f5c6cb;
+}
+
+.correct-icon {
+    font-size: 1.2em;
+    color: #28a745;
+}
+
+.incorrect-icon {
+    font-size: 1.2em;
+    color: #dc3545;
+}
+
+.solution-steps {
+    margin-top: 10px;
+    background: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.solution-steps .step {
+    padding: 5px 0;
+    font-family: 'Courier New', monospace;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Buttons */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-btn, .print-btn, .retry-btn {
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.print-btn {
+    background: #28a745;
+    color: white;
+}
+
+.print-btn:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.4);
+}
+
+.retry-btn {
+    background: #ffc107;
+    color: #333;
+}
+
+.retry-btn:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* Results Section */
+.results-section {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 10px;
+}
+
+.results-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.score-display {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.score-circle span {
+    font-size: 3em;
+    font-weight: 700;
+    color: white;
+}
+
+.score-text {
+    font-size: 1.3em;
+    color: #333;
+    font-weight: 600;
+}
+
+.performance-message {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.performance-message .excellent {
+    color: #28a745;
+    font-weight: 700;
+}
+
+.performance-message .good {
+    color: #17a2b8;
+    font-weight: 700;
+}
+
+.performance-message .fair {
+    color: #ffc107;
+    font-weight: 700;
+}
+
+.performance-message .needs-improvement {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.detailed-results {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.detailed-results h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.result-item {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+.correct-result {
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.incorrect-result {
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+/* Print Styles */
+.print-only {
+    display: none;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    color: #666;
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    .question {
+        page-break-inside: avoid;
+    }
+
+    .results-section {
+        page-break-before: always;
+    }
+
+    .feedback {
+        border: 2px solid #333;
+    }
+
+    .score-circle {
+        border: 3px solid #333;
+    }
+
+    /* Ensure form inputs show values when printed */
+    input[type="text"],
+    input[type="date"],
+    textarea {
+        border: 1px solid #333;
+        background: transparent;
+    }
+
+    /* Show selected radio button */
+    input[type="radio"]:checked::after {
+        content: "✓";
+        font-weight: bold;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-row label {
+        margin-bottom: 5px;
+    }
+
+    .answer-input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .answer-input label {
+        margin-bottom: 8px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .submit-btn, .print-btn, .retry-btn {
+        width: 100%;
+        margin: 0;
+    }
+}

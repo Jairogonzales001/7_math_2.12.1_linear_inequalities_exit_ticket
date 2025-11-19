@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra Quest - Exit Ticket</title>
+    <link rel="stylesheet" href="exit-ticket.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header no-print">
+            <h1>Algebra Quest Exit Ticket</h1>
+            <p class="subtitle">Two-Step Linear Inequalities Assessment</p>
+        </div>
+
+        <div class="header print-only">
+            <h1>Algebra Quest Exit Ticket</h1>
+            <p class="subtitle">Two-Step Linear Inequalities Assessment</p>
+        </div>
+
+        <div class="student-info">
+            <div class="info-row">
+                <label for="studentName">Student Name:</label>
+                <input type="text" id="studentName" placeholder="Enter your name">
+            </div>
+            <div class="info-row">
+                <label for="studentDate">Date:</label>
+                <input type="date" id="studentDate">
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>Solve each inequality and write your answer in the form <strong>x < 5</strong> or <strong>x >= -3</strong>.</p>
+            <p>Remember: When you multiply or divide by a negative number, flip the inequality sign!</p>
+        </div>
+
+        <form id="exitTicketForm">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>Question 1:</h3>
+                <p class="problem">Solve: <strong>3x + 5 > 11</strong></p>
+                <div class="work-area">
+                    <label>Show your work (optional):</label>
+                    <textarea id="work1" rows="3" placeholder="Step 1: Subtract 5 from both sides..."></textarea>
+                </div>
+                <div class="answer-input">
+                    <label>Final Answer:</label>
+                    <input type="text" id="answer1" placeholder="Example: x>7" required>
+                </div>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>Question 2:</h3>
+                <p class="problem">Solve: <strong>-2x + 4 ≤ 10</strong></p>
+                <div class="work-area">
+                    <label>Show your work (optional):</label>
+                    <textarea id="work2" rows="3" placeholder="Step 1: Subtract 4 from both sides..."></textarea>
+                </div>
+                <div class="answer-input">
+                    <label>Final Answer:</label>
+                    <input type="text" id="answer2" placeholder="Example: x<=4" required>
+                </div>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>Question 3:</h3>
+                <p class="problem">Solve: <strong>5x - 7 < 18</strong></p>
+                <div class="work-area">
+                    <label>Show your work (optional):</label>
+                    <textarea id="work3" rows="3" placeholder="Step 1: Add 7 to both sides..."></textarea>
+                </div>
+                <div class="answer-input">
+                    <label>Final Answer:</label>
+                    <input type="text" id="answer3" placeholder="Example: x<10" required>
+                </div>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <h3>Question 4:</h3>
+                <p class="problem">Solve: <strong>-4x - 8 ≥ 12</strong></p>
+                <div class="work-area">
+                    <label>Show your work (optional):</label>
+                    <textarea id="work4" rows="3" placeholder="Step 1: Add 8 to both sides..."></textarea>
+                </div>
+                <div class="answer-input">
+                    <label>Final Answer:</label>
+                    <input type="text" id="answer4" placeholder="Example: x>=8" required>
+                </div>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+
+            <!-- Question 5 - Conceptual -->
+            <div class="question">
+                <h3>Question 5 (Conceptual Understanding):</h3>
+                <p class="problem">When solving an inequality, you must flip the inequality sign when:</p>
+                <div class="multiple-choice">
+                    <label>
+                        <input type="radio" name="concept" value="a" required>
+                        <span>A) Adding or subtracting any number</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="concept" value="b">
+                        <span>B) Multiplying or dividing by a positive number</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="concept" value="c">
+                        <span>C) Multiplying or dividing by a negative number</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="concept" value="d">
+                        <span>D) Never - the inequality sign always stays the same</span>
+                    </label>
+                </div>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+
+            <div class="button-container no-print">
+                <button type="submit" class="submit-btn">Submit Exit Ticket</button>
+            </div>
+        </form>
+
+        <div id="resultsSection" class="results-section" style="display: none;">
+            <h2>Your Results</h2>
+            <div class="score-display">
+                <div class="score-circle">
+                    <span id="scorePercentage">0%</span>
+                </div>
+                <p class="score-text">You got <span id="scoreText">0 out of 5</span> correct!</p>
+            </div>
+
+            <div class="performance-message" id="performanceMessage"></div>
+
+            <div class="detailed-results" id="detailedResults"></div>
+
+            <div class="button-container no-print">
+                <button onclick="window.print()" class="print-btn">Print Exit Ticket</button>
+                <button onclick="resetForm()" class="retry-btn">Try Again</button>
+            </div>
+        </div>
+
+        <div class="footer print-only">
+            <p>Standards: MA.8.AR.2.2 - Solve two-step linear inequalities</p>
+            <p>Date Completed: <span id="printDate"></span></p>
+        </div>
+    </div>
+
+    <script src="exit-ticket.js"></script>
+</body>
+</html>
